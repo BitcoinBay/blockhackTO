@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-Bold.eot");
+  src: url("Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("Poppins-Bold.woff2") format("woff2"), url("Poppins-Bold.woff") format("woff"), url("Poppins-Bold.ttf") format("truetype"), url("Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-ExtraBold.eot");
+  src: url("Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), url("Poppins-ExtraBold.woff2") format("woff2"), url("Poppins-ExtraBold.woff") format("woff"), url("Poppins-ExtraBold.ttf") format("truetype"), url("Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-SemiBold.eot");
+  src: url("Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("Poppins-SemiBold.woff2") format("woff2"), url("Poppins-SemiBold.woff") format("woff"), url("Poppins-SemiBold.ttf") format("truetype"), url("Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal; }

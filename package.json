@@ -1,0 +1,46 @@
+{
+  "name": "block-hack-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jorrin Bruns",
+  "license": "MIT",
+  "postcss": {
+    "parser": "sugarss",
+    "map": false,
+    "plugins": {
+      "postcss-plugin": {}
+    }
+  },
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "discardComments": {
+          "removeAll": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser-js": "^5.1.2",
+    "node-sass": "^4.13.1",
+    "postcss-load-config": "^2.1.0",
+    "postcss-plugin": "^1.0.0",
+    "sugarss": "^2.0.0"
+  },
+  "dependencies": {}
+}
