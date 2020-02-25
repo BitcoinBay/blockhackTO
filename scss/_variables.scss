@@ -1,8 +1,10 @@
 $brand_blue: #5eb8de;
 $brand_aqua: #0fe9c1;
 $brand_purple: #973f99;
+$brand_black: #272727;
 $base_font_size: 16px;
-$site_margin: 20px;
+$mobile_margin: 20px;
+$breakpoint: 850px;
 
 .poppinsBold {
   font-family: "Poppins";
@@ -15,4 +17,10 @@ $site_margin: 20px;
 .poppinsSemiBold {
   font-family: "Poppins";
   font-weight: 600;
+}
+.poppins {
+  font-family: "Poppins";
+}
+
+@media (min-width: $breakpoint) {
 }

@@ -138,6 +138,9 @@ table {
   font-family: "Poppins";
   font-weight: 600; }
 
+.poppins {
+  font-family: "Poppins"; }
+
 @font-face {
   font-family: "Poppins";
   src: url("../../assets/web-fonts/Poppins-Bold.eot");
@@ -157,6 +160,13 @@ table {
   src: url("../../assets/web-fonts/Poppins-SemiBold.eot");
   src: url("../../assets/web-fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/web-fonts/Poppins-SemiBold.woff2") format("woff2"), url("../../assets/web-fonts/Poppins-SemiBold.woff") format("woff"), url("../../assets/web-fonts/Poppins-SemiBold.ttf") format("truetype"), url("../../assets/web-fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
   font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/web-fonts/Poppins-Regular.eot");
+  src: url("../../assets/web-fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/web-fonts/Poppins-Regular.woff2") format("woff2"), url("../../assets/web-fonts/Poppins-Regular.woff") format("woff"), url("../../assets/web-fonts/Poppins-Regular.ttf") format("truetype"), url("../../assets/web-fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
   font-style: normal; }
 
 .countDown_cont {
@@ -362,38 +372,83 @@ html {
   html h1,
   html h2 {
     line-height: 3.2rem; }
+    @media (min-width: 850px) {
+      html h1,
+      html h2 {
+        line-height: 5.4rem; } }
   html h1 {
-    font-size: 3.125rem; }
+    font-size: 3.825rem; }
+    @media (min-width: 850px) {
+      html h1 {
+        font-size: 6.65rem; } }
   html h2 {
     font-size: 1.875rem; }
+    @media (min-width: 850px) {
+      html h2 {
+        font-size: 2.75rem; } }
   html h3 {
-    font-size: 1rem; }
-  html .overflow-cut-off {
-    overflow-x: hidden; }
+    font-size: 1.3rem; }
+    @media (min-width: 850px) {
+      html h3 {
+        font-size: 1.6rem; } }
   html header {
     display: flex;
-    height: 545px;
+    height: 575px;
     width: 100%; }
     html header .absolute {
       position: absolute;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 100%;
       justify-content: space-between;
       display: flex;
       width: 100%; }
+      @media (min-width: 850px) {
+        html header .absolute {
+          height: 78%; } }
       html header .absolute .dot {
+        height: 752px;
+        width: 752px;
         background-color: #5eb8de;
+        border-radius: 50%;
         display: inline-block;
         position: absolute;
+        overflow: hidden;
+        overflow-x: hidden;
         z-index: -1;
-        width: 100vw;
-        height: 155px;
-        top: 0px; }
+        top: -455px;
+        left: -170px; }
+        @media (min-width: 850px) {
+          html header .absolute .dot {
+            top: -160px;
+            left: 20px; } }
       html header .absolute .logo {
         margin-left: 20px;
         margin-top: 20px; }
+        @media (min-width: 850px) {
+          html header .absolute .logo {
+            padding-left: 180px;
+            margin-top: 35px; } }
       html header .absolute .menu {
         height: 20%;
         padding-top: 26px;
-        padding-right: 20px; }
+        padding-right: 20px;
+        width: 60%;
+        text-align: end; }
+        html header .absolute .menu a {
+          text-decoration: none;
+          color: #272727; }
+        @media (min-width: 850px) {
+          html header .absolute .menu {
+            padding-top: 60px; }
+            html header .absolute .menu .hamburger {
+              display: none; } }
+        html header .absolute .menu .navigation {
+          display: none;
+          justify-content: space-around; }
+          @media (min-width: 850px) {
+            html header .absolute .menu .navigation {
+              display: flex; } }
       html header .absolute .mesh-container {
         position: absolute;
         z-index: -1; }
@@ -402,6 +457,10 @@ html {
           top: -50px;
           left: -110px;
           width: 100%; }
+          @media (min-width: 850px) {
+            html header .absolute .mesh-container .mesh {
+              top: -5px;
+              left: -40px; } }
       html header .absolute .happyDev-container {
         position: absolute;
         width: 100%;
@@ -409,11 +468,18 @@ html {
         overflow-y: hidden;
         overflow-x: hidden;
         z-index: -1; }
+        @media (min-width: 850px) {
+          html header .absolute .happyDev-container {
+            height: 37em; } }
         html header .absolute .happyDev-container .happyDev {
           position: relative;
           height: 800px;
           top: 50px;
           left: -195px; }
+          @media (min-width: 850px) {
+            html header .absolute .happyDev-container .happyDev {
+              top: 95px;
+              left: 100px; } }
     html header .hero-text {
       display: flex;
       flex-direction: column;
@@ -423,6 +489,12 @@ html {
       width: 100%;
       color: #0fe9c1;
       padding-right: 20px; }
+      @media (min-width: 850px) {
+        html header .hero-text {
+          align-self: center;
+          padding-right: 5%; }
+          html header .hero-text h2 {
+            padding-right: 25%; } }
       html header .hero-text .inner-hero-text {
         display: flex;
         justify-content: flex-end;
@@ -431,26 +503,38 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding-left: 20px; }
+          padding-left: 1.875rem; }
+      html header .hero-text .desktopBtn {
+        display: none;
+        margin-right: 16%;
+        margin-top: 20px;
+        width: 100%;
+        z-index: 1; }
+        html header .hero-text .desktopBtn .button {
+          width: 14%; }
+        @media (min-width: 850px) {
+          html header .hero-text .desktopBtn {
+            display: flex;
+            justify-content: flex-end; } }
   html .call-to-action {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%; }
-    html .call-to-action a {
-      display: flex;
-      justify-content: center;
-      text-decoration: none; }
-      html .call-to-action a .buy-tickets {
-        width: 90%;
-        height: 3.5rem;
-        background: #ee2f7f;
-        border-radius: 2.4rem;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        color: white;
-        align-self: center; }
+  html .button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none; }
+    html .button .buy-tickets {
+      width: 90%;
+      height: 3.5rem;
+      background: #ee2f7f;
+      border-radius: 2.4rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: white;
+      align-self: center; }
   html .container {
     display: flex;
     justify-content: center;

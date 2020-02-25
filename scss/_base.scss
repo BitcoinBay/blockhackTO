@@ -10,53 +10,95 @@ html {
   h1,
   h2 {
     line-height: 3.2rem;
+    @media (min-width: $breakpoint) {
+      line-height: 5.4rem;
+    }
   }
   h1 {
-    font-size: 3.125rem;
+    font-size: 3.825rem;
+    @media (min-width: $breakpoint) {
+      font-size: 6.65rem;
+    }
   }
   h2 {
     font-size: 1.875rem;
+    @media (min-width: $breakpoint) {
+      font-size: 2.75rem;
+    }
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    @media (min-width: $breakpoint) {
+      font-size: 1.6rem;
+    }
   }
 
-  .overflow-cut-off {
-    overflow-x: hidden;
-  }
   header {
     display: flex;
-    height: 545px; //TODO: change to releative unit
+    height: 575px; //TODO: change to releative unit
     width: 100%;
     .absolute {
       position: absolute;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 100%;
       justify-content: space-between;
       display: flex;
       width: 100%;
+      @media (min-width: $breakpoint) {
+        height: 78%;
+      }
+
       .dot {
-        //cant get this to not overflow
-        // height: 752px;
-        // width: 752px;
+        height: 752px;
+        width: 752px;
         background-color: $brand_blue;
-        // border-radius: 50%;
+        border-radius: 50%;
         display: inline-block;
         position: absolute;
+        overflow: hidden;
+        overflow-x: hidden;
         z-index: -1;
-        // top: -400px; //TODO: change to calc
-        // left: -117px; //TODO: change to calc
-        // // clip-path: inset(5% 20% 15% 10%);
-        width: 100vw;
-        height: 155px;
-        top: 0px;
+        top: -455px; //TODO: change to calc
+        left: -170px; //TODO: change to calc
+        @media (min-width: $breakpoint) {
+          top: -160px;
+          left: 20px;
+        }
       }
       .logo {
-        margin-left: $site_margin;
-        margin-top: $site_margin;
+        margin-left: $mobile_margin;
+        margin-top: $mobile_margin;
+
+        @media (min-width: $breakpoint) {
+          padding-left: 180px;
+          margin-top: 35px;
+        }
       }
       .menu {
         height: 20%;
         padding-top: 26px;
-        padding-right: $site_margin;
+        padding-right: $mobile_margin;
+        width: 60%;
+        text-align: end;
+        a {
+          text-decoration: none;
+          color: $brand_black;
+        }
+        @media (min-width: $breakpoint) {
+          padding-top: 60px;
+
+          .hamburger {
+            display: none;
+          }
+        }
+        .navigation {
+          display: none;
+          justify-content: space-around;
+          @media (min-width: $breakpoint) {
+            display: flex;
+          }
+        }
       }
       .mesh-container {
         position: absolute;
@@ -66,6 +108,10 @@ html {
           top: -50px;
           left: -110px;
           width: 100%;
+          @media (min-width: $breakpoint) {
+            top: -5px;
+            left: -40px;
+          }
         }
       }
       .happyDev-container {
@@ -76,11 +122,19 @@ html {
         overflow-y: hidden;
         overflow-x: hidden;
         z-index: -1;
+        @media (min-width: $breakpoint) {
+          height: 37em;
+        }
+
         .happyDev {
           position: relative;
           height: 800px;
           top: 50px;
           left: -195px;
+          @media (min-width: $breakpoint) {
+            top: 95px;
+            left: 100px;
+          }
         }
       }
     }
@@ -92,7 +146,14 @@ html {
       align-self: flex-end;
       width: 100%;
       color: $brand_aqua;
-      padding-right: $site_margin;
+      padding-right: $mobile_margin;
+      @media (min-width: $breakpoint) {
+        align-self: center;
+        padding-right: 5%;
+        h2 {
+          padding-right: 25%;
+        }
+      }
       .inner-hero-text {
         display: flex;
         justify-content: flex-end;
@@ -101,7 +162,21 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding-left: $site_margin;
+          padding-left: 1.875rem;
+        }
+      }
+      .desktopBtn {
+        display: none;
+        margin-right: 16%;
+        margin-top: $mobile_margin;
+        width: 100%;
+        z-index: 1;
+        .button {
+          width: 14%;
+        }
+        @media (min-width: $breakpoint) {
+          display: flex;
+          justify-content: flex-end;
         }
       }
     }
@@ -112,21 +187,24 @@ html {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    a {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      .buy-tickets {
-        width: 90%;
-        height: 3.5rem;
-        background: #ee2f7f;
-        border-radius: 2.4rem;
-        margin-top: $site_margin;
-        margin-bottom: $site_margin;
-        font-size: 1rem;
-        color: white;
-        align-self: center;
-      }
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    // @media (min-width: $breakpoint) {
+    //   display: none;
+    // }
+    .buy-tickets {
+      width: 90%;
+      height: 3.5rem;
+      background: #ee2f7f;
+      border-radius: 2.4rem;
+      margin-top: $mobile_margin;
+      margin-bottom: $mobile_margin;
+      font-size: 1rem;
+      color: white;
+      align-self: center;
     }
   }
 

@@ -1,5 +1,6 @@
 /fonts
 /assets/Blockhack-mobile-website.png
+/css
 # Ignore OS files #
 # =============== #
 .DS_Store
