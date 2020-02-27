@@ -1,12 +1,24 @@
 html {
   // overflow: hidden;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   max-width: 100vw;
   width: 100vw;
   font-size: $base_font_size;
   background-color: white;
   // background-color: #f9f374;
-
+  .section-heading {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $breakpoint) {
+      flex-direction: row;
+    }
+    h3 {
+      color: $brand_aqua;
+      padding: 0 2.3125rem;
+      text-align: center;
+      @include poppinsExtraBold;
+    }
+  }
   h1,
   h2 {
     line-height: 3.2rem;
@@ -27,6 +39,12 @@ html {
     }
   }
   h3 {
+    font-size: 1.7rem;
+    @media (min-width: $breakpoint) {
+      font-size: 1.6rem;
+    }
+  }
+  h4 {
     font-size: 1.3rem;
     @media (min-width: $breakpoint) {
       font-size: 1.6rem;
@@ -39,8 +57,8 @@ html {
     width: 100%;
     .absolute {
       position: absolute;
-      overflow-x: hidden;
-      overflow-y: hidden;
+      // overflow-x: hidden;
+      // overflow-y: hidden;
       height: 100%;
       justify-content: space-between;
       display: flex;
@@ -81,6 +99,34 @@ html {
         padding-right: $mobile_margin;
         width: 60%;
         text-align: end;
+        @include poppins;
+        .hamburger {
+          width: 40px;
+          height: 40px;
+        }
+        .nav-bar {
+          @media (max-width: $breakpoint) {
+            display: none;
+            padding-top: 26px;
+            position: relative;
+            top: -70px;
+            left: 20px;
+            background-color: $brand_yellow;
+            padding: 26px 20px;
+            overflow: hidden;
+            .hamburger {
+              position: relative;
+              z-index: 1;
+            }
+            .dot {
+              // display: none;
+              z-index: 0;
+              background-color: $brand_purple;
+              top: -515px;
+              left: 95px;
+            }
+          }
+        }
         a {
           text-decoration: none;
           color: $brand_black;
@@ -93,10 +139,21 @@ html {
           }
         }
         .navigation {
-          display: none;
+          display: flex;
           justify-content: space-around;
-          @media (min-width: $breakpoint) {
+
+          @media (max-width: $breakpoint) {
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            li {
+              margin-bottom: 1.5rem;
+              z-index: 1;
+              a {
+                color: rebeccapurple;
+                font-weight: 600;
+              }
+            }
           }
         }
       }
@@ -147,6 +204,10 @@ html {
       width: 100%;
       color: $brand_aqua;
       padding-right: $mobile_margin;
+      h1,
+      h2 {
+        @include poppinsExtraBold;
+      }
       @media (min-width: $breakpoint) {
         align-self: center;
         padding-right: 5%;
@@ -158,6 +219,8 @@ html {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+        @include poppinsBold;
+
         span {
           display: flex;
           flex-direction: column;
@@ -189,23 +252,8 @@ html {
     width: 100%;
   }
   .button {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    // @media (min-width: $breakpoint) {
-    //   display: none;
-    // }
-    .buy-tickets {
-      width: 90%;
-      height: 3.5rem;
-      background: #ee2f7f;
-      border-radius: 2.4rem;
-      margin-top: $mobile_margin;
-      margin-bottom: $mobile_margin;
-      font-size: 1rem;
-      color: white;
-      align-self: center;
-    }
+    @include button($brand_pink, white);
+    width: 100%;
   }
 
   .container {

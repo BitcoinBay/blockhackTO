@@ -1,8 +1,14 @@
 $(function() {
-  // $windowWidth = $(window).width()
-  // //change to css
-  // if ($windowWidth > 700) {
-  //   $(".hamburger").remove()
-  // }
-  // console.log($windowWidth)
+  $hamburger = $(".hamburger")
+  $mobileMenu = $(".nav-bar")
+
+  let menuOpen = false
+
+  $hamburger.on("click", function() {
+    $mobileMenu.slideToggle({ direction: "right" })
+    // $mobileMenu.toggle("slide")
+    // $mobileMenu.hide("slide", { direction: "left" }, 1000)
+
+    console.log("clicked")
+  })
 })

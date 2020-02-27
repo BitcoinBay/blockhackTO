@@ -2,24 +2,64 @@ $brand_blue: #5eb8de;
 $brand_aqua: #0fe9c1;
 $brand_purple: #973f99;
 $brand_black: #272727;
+$brand_pink: #ee2f7f;
+$brand_yellow: #f9f374;
 $base_font_size: 16px;
 $mobile_margin: 20px;
 $breakpoint: 850px;
 
-.poppinsBold {
+@mixin poppinsBold {
   font-family: "Poppins";
   font-weight: bold;
 }
-.poppinsExtraBold {
+
+@mixin poppinsExtraBold {
   font-family: "Poppins";
   font-weight: 800;
 }
-.poppinsSemiBold {
+@mixin poppinsSemiBold {
   font-family: "Poppins";
   font-weight: 600;
 }
-.poppins {
+@mixin poppins {
   font-family: "Poppins";
+}
+@mixin roboto {
+  font-family: "Roboto";
+}
+button {
+  @include poppinsSemiBold;
+}
+@mixin button($bgColor, $color) {
+  display: flex;
+
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1;
+
+  // @media (min-width: $breakpoint) {
+  //   display: none;
+  // }
+  .buy-tickets {
+    width: 100%;
+    height: 3.5rem;
+    background: $bgColor;
+    border-radius: 2.4rem;
+    // margin-top: $mobile_margin;
+    // margin-bottom: $mobile_margin;
+    font-size: 1rem;
+    color: $color;
+    border-color: $brand_pink;
+    align-self: center;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+h5,
+h6 {
+  @include poppinsExtraBold;
 }
 
 @media (min-width: $breakpoint) {

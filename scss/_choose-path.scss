@@ -1,0 +1,56 @@
+.choose-path {
+  h5 {
+    font-size: 2rem;
+    @media (min-width: $breakpoint) {
+      font-size: 1.6rem;
+    }
+  }
+  h6 {
+    font-size: 1.25rem;
+    @media (min-width: $breakpoint) {
+      font-size: 1.6rem;
+    }
+  }
+  .path {
+    // * {
+    //   margin: 10px 0;
+    // }
+    .path-img {
+      height: 158px;
+      width: 158px;
+      border-radius: 50%;
+      background-color: grey;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #973f99;
+    border-radius: 20px;
+    margin: $mobile_margin;
+    padding: 40px 0;
+
+    .path-title {
+      color: $brand_purple;
+      margin: 2rem 0 1rem;
+    }
+    .path-price {
+      color: $brand_blue;
+      margin-bottom: 0.8rem;
+    }
+    .path-perks {
+      color: $brand_purple;
+      padding: 0 25%;
+      @include roboto;
+      * {
+        margin: 1.5rem 0;
+      }
+    }
+    .inverse-button {
+      @include button(white, $brand_pink);
+      width: 90%;
+
+      // border-color: $brand_pink;
+    }
+  }
+}
