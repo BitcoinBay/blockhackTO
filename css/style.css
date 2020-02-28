@@ -364,9 +364,32 @@ h6 {
     transform: rotateX(-180deg);
     z-index: 1; } }
 
+.carousel-section {
+  width: 100vw; }
+  .carousel-section .carousel-cell {
+    padding: 0 20px;
+    margin: 20px 0 0; }
+    .carousel-section .carousel-cell h2 {
+      font-family: "Poppins";
+      font-weight: 800;
+      font-size: 3rem;
+      color: #973f99; }
+    .carousel-section .carousel-cell img {
+      width: 100%;
+      position: relative;
+      top: -50px;
+      z-index: -1; }
+    .carousel-section .carousel-cell p {
+      position: relative;
+      top: -50px;
+      font-family: "Roboto";
+      line-height: 140%;
+      font-size: 1.2rem; }
+      .carousel-section .carousel-cell p strong {
+        font-weight: bold; }
+
 html {
   max-width: 100vw;
-  width: 100vw;
   font-size: 16px;
   background-color: white; }
   html .section-heading {
@@ -374,13 +397,17 @@ html {
     flex-direction: column; }
     @media (min-width: 850px) {
       html .section-heading {
-        flex-direction: row; } }
+        flex-direction: row;
+        justify-content: center; } }
     html .section-heading h3 {
       color: #0fe9c1;
       padding: 0 2.3125rem;
       text-align: center;
       font-family: "Poppins";
       font-weight: 800; }
+      @media (min-width: 850px) {
+        html .section-heading h3 {
+          padding: 0; } }
   html h1,
   html h2 {
     line-height: 3.2rem; }
@@ -411,13 +438,15 @@ html {
   html header {
     display: flex;
     height: 575px;
-    width: 100%; }
+    width: 100vw; }
     html header .absolute {
       position: absolute;
+      overflow-x: hidden;
+      overflow-y: hidden;
       height: 100%;
       justify-content: space-between;
       display: flex;
-      width: 100%; }
+      width: 100vw; }
       @media (min-width: 850px) {
         html header .absolute {
           height: 78%; } }
@@ -460,7 +489,8 @@ html {
             padding-top: 26px;
             position: relative;
             top: -70px;
-            left: 20px;
+            right: 25px;
+            width: 104%;
             background-color: #f9f374;
             padding: 26px 20px;
             overflow: hidden; }
@@ -471,7 +501,7 @@ html {
               z-index: 0;
               background-color: #973f99;
               top: -515px;
-              left: 95px; } }
+              left: 45px; } }
         html header .absolute .menu a {
           text-decoration: none;
           color: #272727; }
@@ -608,49 +638,61 @@ html {
     .choose-path h6 {
       font-size: 1.6rem; } }
 
-.choose-path .path {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 2px solid #973f99;
-  border-radius: 20px;
-  margin: 20px;
-  padding: 40px 0; }
-  .choose-path .path .path-img {
-    height: 158px;
-    width: 158px;
-    border-radius: 50%;
-    background-color: grey; }
-  .choose-path .path .path-title {
-    color: #973f99;
-    margin: 2rem 0 1rem; }
-  .choose-path .path .path-price {
-    color: #5eb8de;
-    margin-bottom: 0.8rem; }
-  .choose-path .path .path-perks {
-    color: #973f99;
-    padding: 0 25%;
-    font-family: "Roboto"; }
-    .choose-path .path .path-perks * {
-      margin: 1.5rem 0; }
-  .choose-path .path .inverse-button {
+.choose-path .paths {
+  justify-content: center; }
+  @media (min-width: 850px) {
+    .choose-path .paths {
+      display: flex; } }
+  .choose-path .paths .path {
     display: flex;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 1;
-    width: 90%; }
-    .choose-path .path .inverse-button .buy-tickets {
-      width: 100%;
-      height: 3.5rem;
-      background: white;
-      border-radius: 2.4rem;
-      font-size: 1rem;
-      color: #ee2f7f;
-      border-color: #ee2f7f;
-      align-self: center; }
-      .choose-path .path .inverse-button .buy-tickets:focus {
-        outline: 0; }
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #973f99;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 40px 0; }
+    @media (min-width: 850px) {
+      .choose-path .paths .path {
+        display: flex;
+        width: 25%; } }
+    .choose-path .paths .path .path-img {
+      height: 158px;
+      width: 158px;
+      border-radius: 50%;
+      background-color: grey; }
+    .choose-path .paths .path .path-title {
+      color: #973f99;
+      margin: 2rem 0 1rem; }
+    .choose-path .paths .path .path-price {
+      color: #5eb8de;
+      margin-bottom: 0.8rem; }
+    .choose-path .paths .path .path-perks {
+      color: #973f99;
+      padding: 0 25%;
+      font-family: "Roboto"; }
+      .choose-path .paths .path .path-perks * {
+        margin: 1.5rem 0; }
+    .choose-path .paths .path .inverse-button {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 1;
+      width: 90%; }
+      .choose-path .paths .path .inverse-button .buy-tickets {
+        width: 100%;
+        height: 3.5rem;
+        background: white;
+        border-radius: 2.4rem;
+        font-size: 1rem;
+        color: #ee2f7f;
+        border-color: #ee2f7f;
+        align-self: center; }
+        .choose-path .paths .path .inverse-button .buy-tickets:focus {
+          outline: 0; }
+      @media (min-width: 850px) {
+        .choose-path .paths .path .inverse-button {
+          margin-top: auto; } }
 
 .map iframe {
   width: 100%;

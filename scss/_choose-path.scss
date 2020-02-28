@@ -11,46 +11,56 @@
       font-size: 1.6rem;
     }
   }
-  .path {
-    // * {
-    //   margin: 10px 0;
-    // }
-    .path-img {
-      height: 158px;
-      width: 158px;
-      border-radius: 50%;
-      background-color: grey;
+  .paths {
+    @media (min-width: $breakpoint) {
+      display: flex;
     }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #973f99;
-    border-radius: 20px;
-    margin: $mobile_margin;
-    padding: 40px 0;
+    justify-content: center;
 
-    .path-title {
-      color: $brand_purple;
-      margin: 2rem 0 1rem;
-    }
-    .path-price {
-      color: $brand_blue;
-      margin-bottom: 0.8rem;
-    }
-    .path-perks {
-      color: $brand_purple;
-      padding: 0 25%;
-      @include roboto;
-      * {
-        margin: 1.5rem 0;
+    .path {
+      @media (min-width: $breakpoint) {
+        display: flex;
+        width: 25%;
       }
-    }
-    .inverse-button {
-      @include button(white, $brand_pink);
-      width: 90%;
+      .path-img {
+        height: 158px;
+        width: 158px;
+        border-radius: 50%;
+        background-color: grey;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 2px solid #973f99;
+      border-radius: 20px;
+      margin: $mobile_margin;
+      padding: 40px 0;
 
-      // border-color: $brand_pink;
+      .path-title {
+        color: $brand_purple;
+        margin: 2rem 0 1rem;
+      }
+      .path-price {
+        color: $brand_blue;
+        margin-bottom: 0.8rem;
+      }
+      .path-perks {
+        color: $brand_purple;
+        padding: 0 25%;
+        @include roboto;
+        * {
+          margin: 1.5rem 0;
+        }
+      }
+      .inverse-button {
+        @include button(white, $brand_pink);
+        width: 90%;
+        @media (min-width: $breakpoint) {
+          margin-top: auto;
+        }
+        // border-color: $brand_pink;
+      }
     }
   }
 }

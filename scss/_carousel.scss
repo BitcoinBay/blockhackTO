@@ -1,0 +1,29 @@
+.carousel-section {
+  width: 100vw;
+  .carousel-cell {
+    padding: 0 $mobile_margin;
+    margin: $mobile_margin 0 0;
+
+    h2 {
+      @include poppinsExtraBold;
+      font-size: 3rem;
+      color: $brand_purple;
+    }
+    img {
+      width: 100%;
+      position: relative;
+      top: -50px;
+      z-index: -1;
+    }
+    p {
+      position: relative;
+      top: -50px;
+      @include roboto;
+      line-height: 140%;
+      font-size: 1.2rem;
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
